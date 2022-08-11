@@ -134,13 +134,18 @@ public class FuelSystem implements IFuelSystem {
          * В данной строке кода мы увеличиваем значение поля currentFuelVolume на значение
          * fuelToFillUpVolume.
          */
-        currentFuelVolume = currentFuelVolume + fuelToFillUpVolume;
+        if (currentFuelVolume + fuelToFillUpVolume <= tankVolume) {
+            currentFuelVolume = currentFuelVolume + fuelToFillUpVolume;
 
-        /*
-         * В данной строке мы выводим в консоль звук пополнения бензобака, так как обычно
-         * при пополнении бензобака слышно, как он пополняется.
-         */
-        System.out.println("Буль-буль-буль - слышен звук заливания бензина в бензобак");
+            /*
+             * В данной строке мы выводим в консоль звук пополнения бензобака, так как обычно
+             * при пополнении бензобака слышно, как он пополняется.
+             */
+            System.out.println("Буль-буль-буль - слышен звук заливания бензина в бензобак");
+        } else {
+            System.out.println(currentFuelVolume + fuelToFillUpVolume - tankVolume + "л. топлива не поместилось в бензобак");
+            currentFuelVolume = tankVolume;
+        }
     }
 
     /**
@@ -159,4 +164,5 @@ public class FuelSystem implements IFuelSystem {
     public int getCurrentFuelVolume() {
         return currentFuelVolume;
     }
+
 }

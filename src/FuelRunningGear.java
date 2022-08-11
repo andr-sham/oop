@@ -56,6 +56,7 @@ public class FuelRunningGear implements IRunningGear {
     public void brake() {
         int brakeForce = brakeSystem.brake();
         currentSpeed = currentSpeed - brakeForce;
+        currentSpeed = currentSpeed > 0 ? currentSpeed : 0;
     }
 
     /**
