@@ -165,4 +165,13 @@ public class FuelSystem implements IFuelSystem {
         return currentFuelVolume;
     }
 
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     *
+     * @return возвращает значение объема созданного бензобака
+     */
+    @Override
+    public int getTankVolume() {
+        return tankVolume;
+    }
 }

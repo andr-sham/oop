@@ -56,7 +56,7 @@ public class FuelRunningGear implements IRunningGear {
     public void brake() {
         int brakeForce = brakeSystem.brake();
         currentSpeed = currentSpeed - brakeForce;
-        currentSpeed = currentSpeed > 0 ? currentSpeed : 0;
+        currentSpeed = Math.max(currentSpeed, 0);
     }
 
     /**
@@ -87,5 +87,15 @@ public class FuelRunningGear implements IRunningGear {
     @Override
     public int getCurrentSpeed() {
         return currentSpeed;
+    }
+
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     *
+     * @return возвращает значение объема созданного бензобака
+     */
+    @Override
+    public int getTankVolume() {
+        return fuelSystem.getTankVolume();
     }
 }

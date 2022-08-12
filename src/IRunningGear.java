@@ -33,4 +33,10 @@ public interface IRunningGear {
      * @return текущая скорость ходовой части
      */
     int getCurrentSpeed();
+
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     * @return возвращает значение объема созданного бензобака
+     */
+    int getTankVolume();
 }

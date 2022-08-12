@@ -119,4 +119,14 @@ class Car implements ICar {
     public void getCurrentFuelVolume() {
         System.out.println("Уровень топлива на отметке " + runningGear.getCurrentFuelVolume() + " л.");
     }
+
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     *
+     * @return возвращает значение объема созданного бензобака
+     */
+    @Override
+    public int getTankVolume() {
+        return runningGear.getTankVolume();
+    }
 }

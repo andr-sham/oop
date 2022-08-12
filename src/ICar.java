@@ -56,4 +56,10 @@ public interface ICar {
      * Метод получения текущего объема топлива в автомобиле.
      */
     void getCurrentFuelVolume();
+
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     * @return возвращает значение объема созданного бензобака
+     */
+    int getTankVolume();
 }

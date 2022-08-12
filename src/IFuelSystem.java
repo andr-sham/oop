@@ -55,5 +55,12 @@ public interface IFuelSystem {
      */
     int getCurrentFuelVolume();
 
+    /**
+     * метод getTankVolume возвращает значение объема созданного бензобака
+     *
+     * @return возвращает значение объема созданного бензобака
+     */
+    int getTankVolume();
+
 
 }
