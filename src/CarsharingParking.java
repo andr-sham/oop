@@ -4,9 +4,9 @@
 public class CarsharingParking implements iCarsharingParking {
 
     /**
-     * создаём автопарк с size количеством машин
+     * создаём автопарк
      */
-    private Car[] cars;
+    private final Car[] cars;
 
     /**
      * счётчик текущего свободного автомобиля
